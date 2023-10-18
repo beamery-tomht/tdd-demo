@@ -1,0 +1,52 @@
+{
+  "name": "tdd-demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "test:unit": "ts-mocha -p tsconfig.unit.json 'src/**/*.test.ts'",
+    "test:unit:dev": "yarn test:unit -w --watch-files 'src/**/*.ts'",
+    "test:unit:cover": "nyc --silent yarn test:unit",
+    "test:unit:report": "nyc report",
+    "test:int": "cypress run",
+    "test:int:dev": "cypress open"
+  },
+  "dependencies": {
+    "@beamery/api-client": "^0.8.1",
+    "@beamery/lib-ds-components": "^0.219.1",
+    "@beamery/lib-ds-icons": "^0.46.6",
+    "@beamery/lib-ds-theme": "^0.73.0",
+    "isomorphic-fetch": "^3.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.7",
+    "@types/mocha": "^10.0.2",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@types/sinon": "^10.0.19",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "chai": "^4.3.10",
+    "cypress": "^13.3.1",
+    "cypress-vite": "^1.4.2",
+    "eslint": "^8.45.0",
+    "eslint-plugin-cypress": "^2.15.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "mocha": "^10.2.0",
+    "nock": "^13.3.4",
+    "nyc": "^15.1.0",
+    "sinon": "^16.1.0",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  }
+}
